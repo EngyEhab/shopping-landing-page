@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@plugin "./hero.ts";
+@source "../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}";
+
+/* Global reset & base styles */
+* {
+  font-family: var(--font-inter), sans-serif;
+}
+
+header {
+  @apply lg:px-0 max-w-full;
+}

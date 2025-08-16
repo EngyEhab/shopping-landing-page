@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Classic White T-Shirt",
+        "price": 19.99,
+        "image": "classic-white-tshirt.jpg",
+        "category": "Clothing"
+    },
+    {
+        "id": 2,
+        "name": "Wireless Headphones",
+        "price": 79.99,
+        "image": "wireless-headphones.jpg",
+        "category": "Electronics"
+    },
+    {
+        "id": 3,
+        "name": "Sports Water Bottle",
+        "price": 14.99,
+        "image": "sports-water-bottle.jpg",
+        "category": "Accessories"
+    },
+    {
+        "id": 4,
+        "name": "Leather Backpack",
+        "price": 99.99,
+        "image": "leather-backpack.jpg",
+        "category": "Bags"
+    },
+    {
+        "id": 5,
+        "name": "Premium Wool Coat",
+        "price": 299.99,
+        "image": "wool-coat.jpg",
+        "category": "Clothing"
+    },
+    {
+        "id": 6,
+        "name": "Smart TV",
+        "price": 999.99,
+        "image": "4k-smart-tv.jpg",
+        "category": "Electronics"
+    },
+    {
+        "id": 7,
+        "name": "Leather Wallet",
+        "price": 89.99,
+        "image": "leather-wallet.jpg",
+        "category": "Accessories"
+    },
+    {
+        "id": 8,
+        "name": "Leather Briefcase",
+        "price": 349.99,
+        "image": "leather-briefcase.jpg",
+        "category": "Bags"
+    },
+    {
+        "id": 9,
+        "name": "Cashmere Sweater",
+        "price": 199.99,
+        "image": "cashmere-sweater.jpg",
+        "category": "Clothing"
+    },
+    {
+        "id": 10,
+        "name": "Gaming Laptop",
+        "price": 899.99,
+        "image": "gaming-laptop.jpg",
+        "category": "Electronics"
+    },
+    {
+        "id": 11,
+        "name": "Smartwatch",
+        "price": 249.99,
+        "image": "smartwatch.jpg",
+        "category": "Accessories"
+    },
+    {
+        "id": 12,
+        "name": "Travel Backpack",
+        "price": 179.99,
+        "image": "travel-backpack.jpg",
+        "category": "Bags"
+    }
+]
