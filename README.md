@@ -7,4 +7,4 @@
  4. Open http://localhost:3000
 
  ## Live Demo
- [Deployed URL](https://shopping-landing-page.vercel.app/)
+ [Deployed URL](https://shopping-landing-page-seven.vercel.app/)
