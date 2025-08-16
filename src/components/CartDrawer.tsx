@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Drawer,
   DrawerContent,
@@ -21,20 +21,24 @@ export default function CartDrawer({
   isOpen: boolean;
   onOpenChange: (isOpen: boolean) => void;
 }) {
-  const { currentCartItems, addToCart, removeFromCart } = useCart();
+  const { currentCartItems, addToCart, removeFromCart, purchase } = useCart();
 
-  useEffect(() => {
-    console.log(currentCartItems);
-  }, [currentCartItems]);
+  const handlePurchase = () => {
+    purchase();
+    onOpenChange(false);
+  };
 
   return (
-    <Drawer isOpen={isOpen} onOpenChange={onOpenChange} className="py-4 ps-4" classNames={
-      {
-        closeButton: "me-4 mt-2"
-      }
-    }>
+    <Drawer
+      isOpen={isOpen}
+      onOpenChange={onOpenChange}
+      className="py-4 ps-4"
+      classNames={{
+        closeButton: "me-4 mt-2",
+      }}
+    >
       <DrawerContent>
-        {(onClose) =>
+        {() =>
           currentCartItems.filter((item) => item.quantity > 0).length === 0 ? (
             <>
               <div className="flex flex-col gap-2 justify-center items-center h-full">
@@ -99,7 +103,7 @@ export default function CartDrawer({
                 <Button
                   color="secondary"
                   className="rounded-sm text-white w-full"
-                  onPress={onClose}
+                  onPress={handlePurchase}
                 >
                   Purchase
                 </Button>

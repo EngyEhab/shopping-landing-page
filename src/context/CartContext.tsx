@@ -1,6 +1,6 @@
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { Product } from "@/types/product";
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext} from "react";
 import { addToast } from "@heroui/toast";
 
 type CartContextType = {
@@ -8,6 +8,7 @@ type CartContextType = {
   setCurrentCartItems: React.Dispatch<React.SetStateAction<cartItem[]>>;
   addToCart: (item: Product) => void;
   removeFromCart: (item: Product) => void;
+  purchase: () => void;
 };
 
 type cartItem = {
@@ -20,6 +21,7 @@ const CartContext = createContext<CartContextType>({
   setCurrentCartItems: () => {},
   addToCart: () => {},
   removeFromCart: () => {},
+  purchase: () => {},
 });
 
 export const useCart = () => useContext(CartContext);
@@ -77,6 +79,13 @@ export default function CartProvider({
     });
   };
 
+  const purchase = () => {
+    setCurrentCartItems([]);
+    addToast({
+      title: "Purchase successful",
+    });
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -84,6 +93,7 @@ export default function CartProvider({
         setCurrentCartItems,
         addToCart,
         removeFromCart,
+        purchase,
       }}
     >
       {children}
